@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Débora Pinto | Jornalismo & Comunicação de Impacto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1b4332;
+            --secondary: #2d6a4f;
+            --accent: #d8f3dc;
+            --text: #2b2b2b;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Merriweather', serif;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p.subtitle {
+            font-size: 1.2rem;
+            color: var(--accent);
+            max-width: 800px;
+            margin: 0 auto 1.5rem auto;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+        }
+
+        .contact-info a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        section {
+            margin-bottom: 3.5rem;
+        }
+
+        h2.section-title {
+            color: var(--primary);
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            background: var(--white);
+            padding: 1.5rem;
+            border-left: 4px solid var(--secondary);
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .card .meta {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 0.8rem;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .card a.link-btn {
+            display: inline-block;
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px solid var(--primary);
+            width: fit-content;
+        }
+
+        .timeline-item {
+            background: var(--white);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+        }
+
+        .timeline-header h3 {
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .timeline-header .period {
+            font-size: 0.85rem;
+            color: #777;
+        }
+
+        .timeline-role {
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        ul.skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            list-style: none;
+        }
+
+        ul.skills-list li {
+            background: var(--accent);
+            color: var(--primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .list-styled {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+            list-style-type: disc;
+            padding-left: 2.5rem;
+        }
+
+        .list-styled li {
+            margin-bottom: 0.8rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--primary);
+            color: var(--white);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Débora Pinto</h1>
+        <p class="subtitle">Jornalista & Consultora Estratégica em Comunicação de Impacto[cite: 1]</p>
+        <div class="contact-info">
+            <span>📍 São Paulo/SP (Disponível para mudança)[cite: 1]</span>
+            <span>📞 (11) 98173-7431[cite: 1]</span>
+            <span>✉️ <a href="mailto:deborapintonature@gmail.com">deborapintonature@gmail.com</a>[cite: 1]</span>
+            <span>🔗 <a href="https://linkedin.com/in/déborapintook" target="_blank">LinkedIn</a>[cite: 1]</span>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- RESUMO -->
+        <section class="about">
+            <h2 class="section-title">Resumo Profissional</h2>
+            <p>
+                Jornalista e consultora de comunicação com 25 anos de trajetória, especializada em transformar pesquisa, escuta de territórios e vozes comunitárias em narrativas estratégicas sobre meio ambiente, clima, cultura e direitos humanos[cite: 1]. Experiência consolidada em comunicação com comunidades tradicionais, indígenas e periféricas, redação otimizada para web e gestão de projetos socioambientais em campo[cite: 1].
+            </p>
+        </section>
+
+        <!-- DESTAQUES & PUBLICAÇÕES COM OS LINKS REAIS -->
+        <section>
+            <h2 class="section-title">Reportagens & Publicações em Destaque</h2>
+            <div class="grid">
+                
+                <div class="card">
+                    <div>
+                        <h3>Cupuaçu reinventado: Sistemas Agroflorestais</h3>
+                        <p class="meta">((o))eco | Outubro de 2025[cite: 1]</p>
+                        <p>RECA eleva produção do fruto amazônico com Sistemas Agroflorestais[cite: 1].</p>
+                    </div>
+                    <a href="https://oeco.org.br/reportagens/cupuacu-reinventado-reca-eleva-producao-do-fruto-amazonico-com-sistemas-agroflorestais/" target="_blank" class="link-btn">Ler reportagem &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <h3>Multifacetadas, hortas urbanas de São Paulo</h3>
+                        <p class="meta">((o))eco | Janeiro de 2024[cite: 1]</p>
+                        <p>Contribuição para a saúde ambiental da cidade com escuta territorial na Zona Oeste[cite: 1].</p>
+                    </div>
+                    <a href="https://oeco.org.br/reportagens/multifacetadas-hortas-urbanas-de-sao-paulo-contribuem-para-a-saude-ambiental-da-cidade/" target="_blank" class="link-btn">Ler reportagem &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <h3>Castanheiros guardiões da floresta</h3>
+                        <p class="meta">((o))eco[cite: 2]</p>
+                        <p>Atuação como guardiões da floresta amazônica no Amapá[cite: 2].</p>
+                    </div>
+                    <a href="https://oeco.org.br/reportagens/castanheiros-atuam-como-guardioes-da-floresta-amazonica-no-amapa/" target="_blank" class="link-btn">Ler reportagem &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <h3>Coleta da castanha na Amazônia</h3>
+                        <p class="meta">National Geographic Brasil[cite: 2]</p>
+                        <p>Integração ancestral com a floresta amazônica na RDS do Rio Iratapuru (AP)[cite: 2].</p>
+                    </div>
+                    <a href="https://www.nationalgeographicbrasil.com/meio-ambiente/2020/03/coleta-da-castanha-resiste-em-integracao-ancestral-com-a-floresta-amazonica" target="_blank" class="link-btn">Ler reportagem &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <h3>Mongabay - Artigos e Coberturas</h3>
+                        <p class="meta">Agência Internacional de Notícias[cite: 2]</p>
+                        <p>Produção de reportagens especiais, entrevistas de campo e matérias de contexto sobre a Amazônia[cite: 2].</p>
+                    </div>
+                    <a href="https://news.mongabay.com/by/debora-pinto/" target="_blank" class="link-btn">Ver portfólio no Mongabay &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <h3>Vozes de Impacto para Mulheres Comunicadoras</h3>
+                        <p class="meta">Fiquem Sabendo / Embaixada Britânica (2024)[cite: 1]</p>
+                        <p>Finalista do edital de microbolsas[cite: 1].</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- COMPETÊNCIAS -->
+        <section>
+            <h2 class="section-title">Competências</h2>
+            <ul class="skills-list">
+                <li>Jornalismo Ambiental[cite: 3]</li>
+                <li>Comunicação de Impacto[cite: 3]</li>
+                <li>Storytelling Multimídia[cite: 3]</li>
+                <li>Reportagem Investigativa[cite: 3]</li>
+                <li>Escuta Territorial e Comunitária[cite: 3]</li>
+                <li>Produção Audiovisual (Documentários)[cite: 3]</li>
+                <li>Redação SEO[cite: 3]</li>
+                <li>Gestão de Projetos[cite: 3]</li>
+            </ul>
+        </section>
+
+        <!-- EXPERIÊNCIA RECENTE -->
+        <section>
+            <h2 class="section-title">Trajetória Profissional Recente</h2>
+            
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <h3>Autônoma</h3>
+                    <span class="period">01/2020 – Atual[cite: 1]</span>
+                </div>
+                <div class="timeline-role">Consultora Estratégica em Comunicação de Impacto[cite: 1]</div>
+                <p>Transformação de dados e pesquisas em narrativas estratégicas (reportagens, vídeos, campanhas) para organizações socioambientais. Amplificação de vozes de comunidades tradicionais, indígenas e periféricas[cite: 1].</p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <h3>Instituto ClimaInfo</h3>
+                    <span class="period">05/2025 – 07/2025[cite: 1]</span>
+                </div>
+                <div class="timeline-role">Colaboradora Especial para Boletim Diário[cite: 1]</div>
+                <p>Produção de conteúdo para o boletim diário de jornalismo climático, focando em políticas públicas e crise climática[cite: 1].</p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <h3>((o))eco - Jornalismo Ambiental</h3>
+                    <span class="period">08/2022 – 04/2023[cite: 1]</span>
+                </div>
+                <div class="timeline-role">Repórter[cite: 1]</div>
+                <p>Cobertura de política ambiental e projeto Eleições 2022, destacando a consolidação política dos povos indígenas[cite: 1].</p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <h3>Mongabay</h3>
+                    <span class="period">01/2020 – 01/2023[cite: 1]</span>
+                </div>
+                <div class="timeline-role">Colaboradora Freelancer[cite: 1]</div>
+                <p>Produção de reportagens especiais, cobertura de campo e entrevistas com lideranças indígenas[cite: 2].</p>
+            </div>
+        </section>
+
+        <!-- FORMAÇÃO -->
+        <section>
+            <h2 class="section-title">Formação Acadêmica & Cursos</h2>
+            <ul class="list-styled">
+                <li><strong>Bacharelado em Jornalismo</strong> — Faculdade Cásper Líbero (Concluído em 2001)[cite: 1]</li>
+                <li><strong>Extensão em Cultura e Direitos Humanos</strong> — CPF-Sesc SP (2018)[cite: 1]</li>
+                <li><strong>Inteligência Artificial para Movimentos Populares</strong> — FESPSP / MST / Marcha Mundial das Mulheres (2026)[cite: 3]</li>
+                <li><strong>Soberania Alimentar</strong> — FESPSP / MST (2025)[cite: 3]</li>
+                <li><strong>Sprint de Desenvolvimento de Produto Jornalístico</strong> — Google News Initiative (GNI) Startups Lab (2023)[cite: 3]</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Débora Pinto — Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
